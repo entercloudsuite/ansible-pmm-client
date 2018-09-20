@@ -21,7 +21,7 @@ Run with default vars:
 ```
 - hosts: all
   roles:
-    - role: entercloudsuite.pmm-client
+    - role: entercloudsuite.pmm_client
       pmm_client_version: 1.14.1
       pmm_client_server_host: 192.168.0.23
       pmm_client_server_port: 443
