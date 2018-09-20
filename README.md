@@ -2,7 +2,7 @@ Ansible Role: pmm-client
 ======================================
 
 [![Build Status](https://travis-ci.org/entercloudsuite/ansible-pmm-client.svg?branch=master)](https://travis-ci.org/entercloudsuite/ansible-pmm-client)
-[![Galaxy](https://img.shields.io/badge/galaxy-entercloudsuite.pmm-client-blue.svg?style=flat-square)](https://galaxy.ansible.com/entercloudsuite/pmm-client)  
+[![Galaxy](https://img.shields.io/badge/galaxy-entercloudsuite.pmm-client-blue.svg?style=flat-square)](https://galaxy.ansible.com/entercloudsuite/pmm_client)  
 
 Installs pmm-client on Ubuntu 16.04 (Xenial)
 
