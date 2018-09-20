@@ -1,0 +1,4 @@
+---
+- src: entercloudsuite.pmm_server
+  version: 1.0.0
+- src: jsecchiero.pmm_client

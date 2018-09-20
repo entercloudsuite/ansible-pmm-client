@@ -1,0 +1,4 @@
+---
+package:
+  pmm-client:
+    installed: true

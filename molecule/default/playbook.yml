@@ -1,0 +1,35 @@
+---
+
+- name: prerequisite local
+  hosts: all
+  tasks:
+    - name: prerequisite local
+      package: name=ca-certificates state=latest
+
+- name: install pmm server
+  hosts: instance-0
+  roles:
+    - role: entercloudsuite.pmm_server
+      pmm_server_ENABLE_SSL: false
+      pmm_client_PROTECTED: true
+      pmm_server_version: 1.14.1
+      pmm_server_username: admin
+      pmm_server_password: admin
+      pmm_client_http_port: 80
+      pmm_client_https_port: 443
+
+- name: install pmm client
+  hosts: instance-1
+  roles:
+    - role: ansible-pmm-client
+      pmm_client_version: 1.14.1
+      pmm_client_server_host: 192.168.0.23
+      pmm_client_server_port: 443
+      pmm_client_server_basic_auth: True
+      pmm_client_server_use_ssl: True
+      pmm_client_server_basic_auth_username: admin
+      pmm_client_server_basic_auth_password: admin
+      pmm_client_add_services:
+        - linux:metrics
+      pmm_client_start_services:
+        - linux:metrics
