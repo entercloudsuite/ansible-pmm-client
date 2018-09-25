@@ -14,5 +14,6 @@ galaxy_info:
     - molecule
 
 dependencies:
-  - {role: jsecchiero.pmm_client}
+  - role: timorunge.pmm_client
+    version: 0.2.0
   # List your role dependencies here, one per line.
